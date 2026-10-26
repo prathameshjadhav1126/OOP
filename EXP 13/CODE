@@ -1,0 +1,21 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    ofstream fout("test.txt");
+
+    if (!fout.is_open())
+    {
+        cout << "File creation failed!";
+        return 1;
+    }
+
+    fout << "Hello World";
+    fout.close();
+
+    cout << "File created successfully!";
+
+    return 0;
+}
