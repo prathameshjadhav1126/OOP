@@ -1,42 +1,33 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-template <typename B>
-class Calculator
-{
-B num1, num2;
+template<class T>
+class calculator{
+T num1,num2;
 public:
-Calculator(B n1, B n2)
-{
-num1 = n1;
-num2 = n2;
+calculator(T n1,T n2){
+num1=n1,num2=n2;
 }
-B add()
-{
-return num1 + num2;
+T add(){
+return num1+num2;
 }
-B sub()
-{
-return num1 - num2;
+T sub(){
+return num1-num2;
 }
-B mul()
-{
-return num1 * num2;
+T mul(){
+return num1*num2;
 }
-B div()
-{
-return num1 / num2;
+T div(){
+return num1/num2;
 }
 };
-int main()
-{
-Calculator<int> c1(5, 6);
-Calculator<double> c2(4.4, 3.4);
-cout << "\nAddition of the integers is : " << c1.add();
-cout << "\nSubtraction of the integers is : " << c1.sub();
-cout << "\nMultiplication of the integers is : " << c1.mul(); cout << "\nDivision of the integers is : " << c1.div();
-cout << "\n\nAddition of the doubles is : " << c2.add();
-cout << "\nSubtraction of the doubles is : " << c2.sub();
-cout << "\nMultiplication of the doubles is : " << c2.mul();
-cout << "\nDivision of the doubles is : " << c2.div();
-return 0;
+int main(){
+char a,c;
+calculator<double>c1(17.7,12.4);
+cout<<"addition of no.:"<<c1.add()<<endl;
+calculator<char>c2(a,c);
+cout<<"substraction of no.:"<<c2.sub()<<endl;
+calculator<int>c3(2,6);
+cout<<"multiplication of no.:"<<c3.mul()<<endl;
+calculator<int>c4(8,2);
+cout<<"division of no.:"<<c4.div()<<endl;
 }
